@@ -14,15 +14,18 @@
     <title>Meals</title>
 </head>
 <body>
+
     <h3><a href="index.html">Home</a></h3>
     <h2>Meals</h2>
 
+    <a href="meals?action=insert&id=${meal.id}">Add Meal</a>
     <table border = 1px width="100%">
         <thead>
             <tr>
-                <td>Date</td>
-                <td>Description</td>
-                <td>Calories</td>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Calories</th>
+                <th colspan="2">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -34,6 +37,8 @@
                     </td>
                     <td>${meal.description}</td>
                     <td>${meal.calories}</td>
+                    <td><a href="meals?action=update&id=${meal.id}">Update</a></td>
+                    <td><a href="meals?action=delete&id=${meal.id}">Delete</a></td>
                 </tr>
             </c:forEach>
         </tbody>
